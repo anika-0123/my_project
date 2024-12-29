@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Navbar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a href="/" class="logo-placeholder">DOmiFIX</a>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="log_In.html">Log In</a></li>
+      <li><a href="/help">Help</a></li>
+      <li><a href="become-a-pro.html">Become a Professional</a></li>
+      
+      <li id="allServices">
+        <button class="dropdown-button">All Services</button>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <!-- <li><a href="/category1">Category 1</a></li>
+          <li><a href="/category2">Category 2</a></li>
+          <li><a href="/category3">Category 3</a></li> -->
+          <li><a href="/category1">house cleaning</a></li>
+          <li><a href="/category2">dish washing</a></li>
+          <li><a href="/category3">plumbing</a></li>
+          
+        </ul>
+      </li>
+      <!-- <li><a href="/blog">Blog</a></li> -->
+      <!-- Search Icon -->
+      <li class="search-icon" id="searchIcon">
+        <button id="searchBtn">🔍</button>
+        <div class="search-container" id="searchContainer">
+          <input 
+            type="text" 
+            id="search" 
+            placeholder="Search for services..." 
+            oninput="showSuggestions()"
+          />
+          <ul id="suggestions">
+            <li><a href="page1.html">Home Cleaning</a></li>
+            <li><a href="page2.html">Plumbing Services</a></li>
+            <li><a href="page3.html">Electrical Work</a></li>
+            <li><a href="page4.html">Gardening</a></li>
+            <li><a href="page5.html">Painting</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  
+<div class="write">
+  <h2>
+    The easy, reliable way to take care of your home.</h2>
+</div>
+
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>House Cleaning Services</h1>
+    <p>Find top-rated service pros for your project!</p>
+    <p>Cleaning and domifix tasks booked and paid for through Handy are performed by experienced, domiix providers who are highly rated by customers like you.</p>
+    <button class="shop-now-btn"><a href="about us.html">about us </a></button>
+   
+    </button>
+  </div>
+</div>
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="picture_2.webp" alt="Card Image">
+
+    
+      <!-- <button>Learn More</button> -->
+       <p><a href="page1.html">Home Cleaning</a></p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="picture_4.jpg" alt="Card Image">
+    
+       <p><a href="page2.html">Washing dishes</a></p>
+     
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="washing.jpg" alt="Card Image">
+    
+       <p><a href="page3.html">Washing dishes</a></p>
+      
+    </div>
+     <!-- Card 4-->
+    <div class="card">
+      <img src="pp.jpg" alt="Card Image">
+      <p><a href="page4.html">Plumbing services</a></p>
+      
+      
+    </div>
+     <!-- Card 5 -->
+
+  </div>
+  
+  <div class="main-container">
+    <div class="text-div">
+      <h1>Are You a Five Star Pro?</h1>
+      <p>
+        From cleaners to handymen to smart home installers, we are always looking for service professionals who are experts in their trade and provide great service to their customers. Join us today!
+      </p>
+      <button class="btn"> <a href="become-a-pro.html">Become a Pro</a>
+
+      </button>
+    </div>
+    <div class="image-div">
+      <img src="proessional.webp" alt="Service Professionals">
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

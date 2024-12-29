@@ -1,0 +1,149 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background: url('picture_4.jpg') no-repeat center center; */
+  /* background-color: #f4f4f4;  */
+}
+
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;          
+  width: 100%;
+  padding: 20px;
+  background: url('picture_4.jpg') no-repeat center center;
+  background-size: cover;  
+  box-sizing: border-box;
+}
+
+.form-section {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 500px; 
+  width: 100%;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-section input,
+.form-section select,
+.form-section button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-section button {
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-section button:hover {
+  opacity: 0.8;
+}
+
+
+.image-section {
+  display: none; 
+}
+
+.status-check {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.status-check p {
+  font-size: 16px;
+}
+
+.status-check a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.status-check a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column; 
+  }
+
+  .form-section {
+      margin-right: 0;
+      margin-bottom: 20px; 
+  }
+
+  .form-section h2 {
+      font-size: 20px; 
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  .form-section input,
+  .form-section select,
+  .form-section button {
+      padding: 10px;
+      margin: 8px 0;
+  }
+
+  .form-section h2 {
+      font-size: 18px; 
+  }
+
+  .status-check p {
+      font-size: 14px; 
+  }
+
+  .status-check a {
+      font-size: 14px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+      padding: 5px;
+  }
+
+  .form-section input,
+  .form-section select,
+  .form-section button {
+      padding: 8px;
+  }
+
+  .status-check p {
+      font-size: 12px; 
+  }
+
+  .status-check a {
+      font-size: 12px;  
+  }
+
+  .form-section h2 {
+      font-size: 16px; 
+  }
+}}

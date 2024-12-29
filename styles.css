@@ -1,0 +1,815 @@
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(hello.avif); */
+  background: #b4c2c9;
+
+  
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-placeholder {
+  font-size: 60px;
+  font-weight: bold;
+  color: #00aaff;
+  /* color: #008f86; */
+  text-decoration: none;
+}
+
+.hamburger {
+  font-size: 1.5em;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.navbar-menu {
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar-menu a,
+.dropdown-button {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  background-color: #f8f9fa;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.dropdown-menu li {
+  margin: 5px 0;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+/* Search Icon Styles */
+.search-icon {
+  position: relative;
+}
+
+.search-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+#search {
+  width: 85%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  max-height: 200px;
+  overflow-y: auto;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+#suggestions li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#suggestions li a {
+  text-decoration: none;
+  color: #333;
+}
+
+#suggestions li a:hover {
+  background-color: #f0f0f0;
+  /* color: #007bff; */
+  color :#008f86
+}
+
+.search-icon.active .search-container {
+  display: block;
+}
+
+/* Media Queries */
+
+/* Navbar for Small Screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  #search {
+    font-size: 0.9em;
+  }
+
+  #suggestions li a {
+    padding: 8px 12px;
+  }
+}
+.write{
+  font-family: 'Times New Roman', Times, serif;
+  color: darkslategray;
+  /* color: #ccc; */
+  font-size: x-large;
+  background-color: #00aaff;
+  /* background-color: #008f86; */
+  justify-content: center;
+  display: flex;
+
+}
+
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url('pictur_3.jpg'); /* Replace with your image filename */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
+}
+
+.hero-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.shop-now-btn {
+  background-color:#0056b3;
+  /* background-color: #008f86; */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shop-now-btn a{
+  text-decoration: none;
+  color: white;
+}
+
+.shop-now-btn:hover {
+  /* background-color: #5fa186; */
+  background-color: #007bff;
+  /* color:#0056b3; */
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .hero-section {
+    height: 70vh; /* Adjust height for smaller screens */
+  }
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  /* max-width: 100%; */
+  max-width: 97%; 
+
+  width: 100%;
+  /* background-color: #008f86; */
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card a{
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.card button {
+  background-color: #007bff;
+  /* background-color:#008f86;  */
+
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+@media  screen and (max-width: 768px) {
+  .card h3 {
+    font-size: 1.1em;
+  }
+
+  .card p {
+    /* font-size: 0.9em; */
+    font-size: 1em;
+  }
+
+  .card button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+.text-div {
+  flex: 1;
+}
+
+.text-div h1 {
+  font-size: 2.5rem;
+  color:#0056b3;
+  margin-bottom: 20px;
+}
+
+.text-div p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.text-div button {
+  /* background-color: #00c2a8; */
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.text-div a{
+  text-decoration: none;
+  /* color: #ccc; */
+  color: #f0f0f0;
+}
+.text-div button:hover {
+  /* background-color: #008f86; */
+  background-color:#007bff;
+}
+
+.image-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-div img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .text-div {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .image-div {
+    flex: 1;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-div h1 {
+    font-size: 2rem;
+  }
+
+  .text-div p {
+    font-size: 1rem;
+  }
+
+  .text-div button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* sign up he ye */
+
+ .container1 {
+  width: 20%;
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background: url('picture_4.jpg') no-repeat center center; */
+  /* background-color: black; */
+background-color: #eee;
+
+  text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"] { 
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.simple {
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+  text-align: left;
+  font-size: small;
+  /* color: white; */
+}
+
+.simple b {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* Background Styling */
+.main1 {
+  width: 100%;
+  /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(hello.avif); */
+  background-position: center;
+  background-size: cover;
+  height: 109vh;
+  margin-top: 200px;
+}
+
+.simple::placeholder {
+  color: darkgray;
+  background-color: lightblue;
+  padding-left: 20px;
+  width: 100%;
+  font-size: larger;
+  text-align: center;
+}
+.kk {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+.kk h1{
+  font-size: larger;
+  color: #0056b3;
+
+}
+
+.signup-button {
+  width: 377px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.signup-button:hover {
+  opacity: 80%;
+}
+
+@media (max-width: 1024px) {
+  .container1 {
+    width: 40%; /* Increase container width */
+    margin: 20px auto;
+  }
+
+  .main1 {
+    margin-top: 150px;
+    /* background: url('picture_4.jpg') no-repeat center center; */
+  }
+
+  .signup-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 14px; /* Make text input font size slightly larger */
+  }
+}
+
+/* For smaller devices like mobile phones */
+@media (max-width: 768px) {
+  .container1 {
+    width: 60%; /* Increase container width further */
+    padding: 15px;
+  }
+
+  .main1 {
+    margin-top: 100px; /* Adjust top margin */
+    height: 100vh; /* Ensure full height on small screens */
+  }
+
+  .signup-button {
+    width: 100%; /* Make button full-width */
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 14px; /* Adjust input font size */
+  }
+}
+
+/* For very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+  .container1 {
+    width: 80%; /* Almost full width on very small screens */
+    padding: 10px;
+  }
+
+  .kk h1 {
+    font-size: 24px; /* Adjust title font size */
+  }
+
+  .signup-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 16px; /* Adjust input font size */
+  }
+
+  .simple::placeholder {
+    font-size: 1.1em; /* Increase placeholder font size for small screens */
+  }
+
+  .simple h4 a {
+    color: blue;
+    text-decoration: none;
+    font-size: 14px; /* Adjust link font size */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ye logion wala */
+
+
+
+/* General Styles */
+.container {
+  width: 20%;
+  padding: 20px;
+  margin: 20px auto;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: black; */
+  background-color: #eee;
+  text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"] { 
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Inputs Styling */
+.inputs {
+  text-transform: capitalize;
+  text-align: left;
+  font-size: small;
+  /* color: white; */
+  color: #222;
+  font-size: medium;
+  font-family: 'Times New Roman', Times, serif;
+}
+.inputs h4{
+  color: #222;
+}
+.inputs a {
+  color: #0056b3;
+  text-decoration: none;
+}
+.inputs h4{
+  color: #222;
+}
+
+/* Background Styling */
+.main2 {
+  width: 100%;
+  /* background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(hello.avif); */
+  background-position: center;
+  background-size: cover;
+  height: 109vh;
+  margin-top: 200px;
+}
+
+.inputs::placeholder {
+  color: darkgray;
+  background-color: lightblue;
+  padding-left: 20px;
+  width: 100%;
+  font-size: larger;
+  text-align: center;
+}
+
+.account {
+  /* color: white; */
+  font-size:xx-large;
+  color: #0056b3;
+  text-align: center;
+  text-transform: capitalize;
+}
+.account h1{
+  font-size: larger;
+  color: #0056b3;
+}
+.login-button {
+  width: 377px;
+  height: 50px;
+  font-size: 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.login-button:hover {
+  opacity: 80%;
+}
+
+/* Responsive Design */
+
+/* For tablets and medium-sized screens */
+@media (max-width: 1024px) {
+  .container {
+    width: 40%; /* Increase container width */
+    margin: 20px auto;
+  }
+
+  .main2 {
+    margin-top: 150px;
+  }
+
+  .login-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 14px; /* Make text input font size slightly larger */
+  }
+}
+
+/* For smaller devices like mobile phones */
+@media (max-width: 768px) {
+  .container {
+    width: 60%; /* Increase container width further */
+    padding: 15px;
+  }
+
+  .main2 {
+    margin-top: 100px; /* Adjust top margin */
+    height: 100vh; /* Ensure full height on small screens */
+  }
+
+  .login-button {
+    width: 100%; /* Make button full-width */
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 14px; /* Adjust input font size */
+  }
+}
+
+/* For very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+  .container {
+    width: 80%; /* Almost full width on very small screens */
+    padding: 10px;
+  }
+
+  .account h1 {
+    font-size: 24px; /* Adjust title font size */
+  }
+
+  .login-button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"], input[type="email"], input[type="password"] {
+    font-size: 16px; /* Adjust input font size */
+  }
+
+  .inputs::placeholder {
+    font-size: 1.1em; /* Increase placeholder font size for small screens */
+  }
+
+  .inputs h4  {
+    text-decoration: none;
+    color: #222;
+    /* color: #008f86; */
+    font-size: 14px; /* Adjust link font size */
+  }
+}
